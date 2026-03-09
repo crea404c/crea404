@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"c:\\\\Users\\\\Antho\\\\Desktop\\\\crea404-landing\\\\add_img_dims.ps1\")",
+      "Bash(powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"c:\\\\Users\\\\Antho\\\\Desktop\\\\crea404-landing\\\\debug_img.ps1\")"
+    ]
+  }
+}
