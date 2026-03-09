@@ -7,12 +7,13 @@
 <title>Remplissez votre agenda de chantiers — Créa404</title>
 <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;margin:0;padding:0;}html{overflow-x:hidden;}body{margin:0;padding:0;overflow-x:clip;}
+*{box-sizing:border-box;margin:0;padding:0;}html{overflow-x:hidden;scroll-behavior:smooth;}body{margin:0;padding:0;overflow-x:clip;}
 :root{--o:#E8500A;--od:#C43D00;--ol:#FEF3EE;--dark:#111;--text:#1A1A1A;--mid:#555;--light:#888;--border:#E5E5E5;--bg2:#F8F7F5;}
 body{margin:0;padding:0;font-family:'Urbanist',sans-serif;color:var(--text);font-size:16px;line-height:1.6;}
 nav{position:sticky!important;top:0!important;z-index:9999!important;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
-.nav-inner{max-width:1200px;margin:0 auto;padding:0 60px;height:72px;display:flex;align-items:center;justify-content:space-between;}
-.nav-inner img{height:38px;width:auto;}
+.nav-inner{max-width:1320px;margin:0 auto;padding:0 60px;height:72px;display:flex;align-items:center;justify-content:space-between;}
+.nav-inner img{height:38px;width:auto;display:block;}
+.nav-inner>a{display:flex;align-items:center;}
 .nav-inner ul{display:flex;align-items:center;gap:28px;list-style:none;}
 .nav-inner ul a{font-size:14px;font-weight:500;color:var(--mid);text-decoration:none;}
 .nav-inner ul a:hover{color:var(--o);}
@@ -109,10 +110,11 @@ p.txt strong{color:var(--dark);font-weight:600;}
 .t-sec .t-sub{color:var(--light);}
 .tarif-total{padding:22px 36px;text-align:center;background:var(--bg2);border:1px solid var(--border);border-top:none;font-size:17px;font-weight:700;color:var(--dark);}
 .tarif-total .acc{color:var(--o);}
-.tarif-note{padding:20px 36px;text-align:center;font-size:13px;color:var(--mid);line-height:1.7;background:white;border:1px solid var(--border);border-top:none;}
+.tarif-note{padding:20px 36px;text-align:center;font-size:13px;color:var(--mid);line-height:1.7;background:white;border:1px solid var(--border);border-top:none;border-radius:0 0 16px 16px;}
 .tarif-note strong{color:var(--dark);font-weight:600;}
-.trois-mois{position:relative;margin-top:20px;padding:32px 36px;background:var(--bg2);border:1px solid var(--border);border-radius:12px;font-size:14px;color:var(--mid);line-height:1.8;}
-.trois-mois::before{content:'Pourquoi 3 mois ?';position:absolute;top:-13px;left:24px;background:var(--o);color:white;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 14px;border-radius:20px;}
+.trois-mois-wrap{margin-top:24px;text-align:center;}
+.trois-mois-tag{display:inline-block;background:var(--o);color:white;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 16px;border-radius:20px;margin-bottom:10px;}
+.trois-mois{padding:24px 36px;background:var(--bg2);border:1px solid var(--border);border-radius:12px;font-size:14px;color:var(--mid);line-height:1.8;text-align:center;}
 .trois-mois strong{color:var(--dark);font-weight:700;}
 .garantie{display:flex;gap:16px;align-items:flex-start;margin-top:16px;padding:24px 28px;background:var(--ol);border:1px solid rgba(232,80,10,0.2);border-radius:12px;}
 .garantie-icon{font-size:22px;flex-shrink:0;margin-top:2px;}
@@ -131,7 +133,7 @@ p.txt strong{color:var(--dark);font-weight:600;}
 .form-mock .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 .form-mock .submit-btn{width:100%;background:var(--o);color:white;border:none;padding:14px 32px;border-radius:8px;font-size:15px;font-weight:700;font-family:'Urbanist',sans-serif;cursor:pointer;}
 footer{background:#16161e;color:rgba(255,255,255,0.55);font-size:14px;}
-.footer-inner{max-width:1200px;margin:0 auto;padding:48px 60px 40px;display:flex;align-items:flex-start;justify-content:space-between;gap:60px;}
+.footer-inner{max-width:1320px;margin:0 auto;padding:48px 60px 40px;display:flex;align-items:flex-start;justify-content:space-between;gap:60px;}
 .footer-brand{flex:1;max-width:380px;}
 .footer-brand img{height:36px;width:auto;display:block;margin-bottom:16px;}
 .footer-brand p{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.8;margin:0;}
@@ -140,7 +142,7 @@ footer{background:#16161e;color:rgba(255,255,255,0.55);font-size:14px;}
 .footer-contact-item svg{flex-shrink:0;width:16px;height:16px;stroke:var(--o);opacity:1;}
 .footer-contact-item a{color:rgba(255,255,255,0.6);text-decoration:none;transition:color 0.2s;}
 .footer-contact-item a:hover{color:var(--o);}
-.footer-bottom{max-width:1200px;margin:0 auto;padding:20px 60px;border-top:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between;font-size:12px;color:rgba(255,255,255,0.3);}
+.footer-bottom{max-width:1320px;margin:0 auto;padding:20px 60px;border-top:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between;font-size:12px;color:rgba(255,255,255,0.3);}
 .footer-bottom a{color:rgba(255,255,255,0.3);text-decoration:none;}
 
 /* HERO MOCKUP BTP */
@@ -434,6 +436,13 @@ footer{background:#16161e;color:rgba(255,255,255,0.55);font-size:14px;}
 }
 .agenda-kpi-num { font-size: 20px !important; font-weight: 800 !important; color: #E8500A !important; letter-spacing: -1px !important; line-height: 1 !important; margin-bottom: 3px !important; padding: 0 !important; background: none !important; }
 .agenda-kpi-lbl { font-size: 9px !important; color: rgba(255,255,255,0.4) !important; text-transform: uppercase !important; letter-spacing: 0.5px !important; margin: 0 !important; padding: 0 !important; background: none !important; }
+.agenda-cell.c1 { background: rgba(52,168,83,0.25) !important; color: #4ade80 !important; font-weight: 700 !important; }
+.agenda-cell.c2 { background: rgba(232,80,10,0.28) !important; color: #ff8c5a !important; font-weight: 700 !important; }
+.agenda-cell.c3 { background: rgba(251,188,4,0.22) !important; color: #fcd34d !important; font-weight: 700 !important; }
+.agenda-cell.today.c1 { box-shadow: 0 0 0 2px #34A853 !important; }
+.agenda-legend { display: flex !important; gap: 10px !important; flex-wrap: wrap !important; }
+.al-item { display: flex !important; align-items: center !important; gap: 4px !important; font-size: 9px !important; color: rgba(255,255,255,0.4) !important; white-space: nowrap !important; }
+.al-dot { width: 8px !important; height: 8px !important; border-radius: 2px !important; flex-shrink: 0 !important; }
 
 
 /* ════════════════════════════════════════════════════════
@@ -637,8 +646,7 @@ footer{background:#16161e;color:rgba(255,255,255,0.55);font-size:14px;}
   .t-price { font-size: 40px !important; }
   .tarif-total { padding: 18px 24px; font-size: 15px; }
   .tarif-note { padding: 16px 24px; font-size: 13px; }
-  .trois-mois { padding: 24px 16px; font-size: 13px; margin-top: 16px; border-radius: 10px; text-align: center; }
-  .trois-mois::before { left: 50%; transform: translateX(-50%); }
+  .trois-mois { padding: 20px 16px; font-size: 13px; border-radius: 10px; }
   #tarif .inner { text-align: left !important; }
   #tarif .label-center { justify-content: flex-start !important; }
   #tarif h2.center { text-align: left !important; }
@@ -922,7 +930,10 @@ footer{background:#16161e;color:rgba(255,255,255,0.55);font-size:14px;}
       </div>
       <div class="tarif-total">Total : <span class="acc">600€ / mois</span> — Engagement 3 mois</div>
       <div class="tarif-note">Ces 500€ sont investis directement pour faire sonner votre téléphone. <strong>Un seul devis signé sur un chantier à 1 500€ ou 2 000€, et vous avez déjà rentabilisé 2 à 3 fois votre mois.</strong></div>
-      <div class="trois-mois">1 mois, ce n'est pas suffisant. 6 mois, c'est trop long. <strong>3 mois, c'est notre offre de bienvenue</strong> — assez court pour être concret, assez long pour être efficace.</div>
+      <div class="trois-mois-wrap">
+        <span class="trois-mois-tag">Pourquoi 3 mois ?</span>
+        <div class="trois-mois">1 mois, ce n'est pas suffisant. 6 mois, c'est trop long. <strong>3 mois, c'est notre offre de bienvenue</strong> — assez court pour être concret, assez long pour être efficace.</div>
+      </div>
       <div class="garantie">
         <span class="garantie-icon">🛡</span>
         <div><p class="garantie-title">Garantie Satisfait ou Remboursé</p><p class="garantie-text">Si au bout de 3 mois vous ne constatez aucun résultat visible, nous vous remboursons 1 mois de frais de gestion (100€). <strong>Vous ne prenez aucun risque. Nous prenons le nôtre.</strong></p></div>
@@ -960,6 +971,12 @@ footer{background:#16161e;color:rgba(255,255,255,0.55);font-size:14px;}
     <span class="agenda-month" style="font-size:18px;font-weight:800;color:white;letter-spacing:-0.5px;background:none;border:none;padding:0;">Votre futur agenda</span>
     <div class="agenda-nav" style="display:flex;gap:6px;"><span style="width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.6);display:flex;align-items:center;justify-content:center;font-size:12px;">‹</span><span style="width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.6);display:flex;align-items:center;justify-content:center;font-size:12px;">›</span></div>
   </div>
+  <div class="agenda-legend">
+    <span class="al-item"><span class="al-dot" style="background:#34A853;"></span>Ravalement façade</span>
+    <span class="al-item"><span class="al-dot" style="background:#E8500A;"></span>Toiture</span>
+    <span class="al-item"><span class="al-dot" style="background:#FBBC04;"></span>Peinture</span>
+    <span class="al-item"><span class="al-dot" style="background:rgba(255,255,255,0.15);"></span>Libre</span>
+  </div>
   <div class="agenda-days-row">
     <span class="agenda-day-label">L</span>
     <span class="agenda-day-label">M</span>
@@ -975,62 +992,62 @@ footer{background:#16161e;color:rgba(255,255,255,0.55);font-size:14px;}
     <div class="agenda-cell empty"></div>
     <div class="agenda-cell empty"></div>
     <div class="agenda-cell empty"></div>
-    <div class="agenda-cell booked">1</div>
+    <div class="agenda-cell free">1</div>
     <div class="agenda-cell free">2</div>
-    <div class="agenda-cell booked">3</div>
-    <div class="agenda-cell booked">4</div>
-    <div class="agenda-cell booked">5</div>
-    <div class="agenda-cell booked">6</div>
-    <div class="agenda-cell booked">7</div>
-    <div class="agenda-cell half">8</div>
+    <div class="agenda-cell free">3</div>
+    <div class="agenda-cell free">4</div>
+    <div class="agenda-cell free">5</div>
+    <div class="agenda-cell free">6</div>
+    <div class="agenda-cell free">7</div>
+    <div class="agenda-cell free">8</div>
     <div class="agenda-cell free">9</div>
-    <div class="agenda-cell booked">10</div>
-    <div class="agenda-cell booked">11</div>
-    <div class="agenda-cell today">12</div>
-    <div class="agenda-cell booked">13</div>
-    <div class="agenda-cell booked">14</div>
-    <div class="agenda-cell booked">15</div>
+    <div class="agenda-cell c1">10</div>
+    <div class="agenda-cell c1">11</div>
+    <div class="agenda-cell c1 today">12</div>
+    <div class="agenda-cell c1">13</div>
+    <div class="agenda-cell c1">14</div>
+    <div class="agenda-cell free">15</div>
     <div class="agenda-cell free">16</div>
-    <div class="agenda-cell booked">17</div>
-    <div class="agenda-cell booked">18</div>
-    <div class="agenda-cell booked">19</div>
-    <div class="agenda-cell booked">20</div>
-    <div class="agenda-cell booked">21</div>
-    <div class="agenda-cell half">22</div>
+    <div class="agenda-cell c2">17</div>
+    <div class="agenda-cell c2">18</div>
+    <div class="agenda-cell c2">19</div>
+    <div class="agenda-cell free">20</div>
+    <div class="agenda-cell free">21</div>
+    <div class="agenda-cell free">22</div>
     <div class="agenda-cell free">23</div>
-    <div class="agenda-cell booked">24</div>
-    <div class="agenda-cell booked">25</div>
-    <div class="agenda-cell booked">26</div>
-    <div class="agenda-cell booked">27</div>
-    <div class="agenda-cell booked">28</div>
+    <div class="agenda-cell c3">24</div>
+    <div class="agenda-cell c3">25</div>
+    <div class="agenda-cell c3">26</div>
+    <div class="agenda-cell c3">27</div>
+    <div class="agenda-cell free">28</div>
     <div class="agenda-cell free">29</div>
     <div class="agenda-cell free">30</div>
-    <div class="agenda-cell booked">31</div>
+    <div class="agenda-cell free">31</div>
   </div>
   <div class="agenda-chantiers" style="display:flex;flex-direction:column;gap:8px;">
-    <div class="agenda-chantier done" style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.06);border-radius:10px;padding:10px 14px;border-left:3px solid #34A853;border-top:none;border-right:none;border-bottom:none;">
-      <span class="ac-icon" style="font-size:18px;flex-shrink:0;">🧱</span>
-      <div class="ac-info" style="flex:1;">
-        <p class="ac-title" style="font-size:12px;font-weight:700;color:white;margin-bottom:2px;padding:0;background:none;">Ravalement façade — M. Bernard</p>
-        <p class="ac-sub" style="font-size:10px;color:rgba(255,255,255,0.45);margin:0;padding:0;background:none;">Lun 10 → Ven 14 mars · Bordeaux</p>
+    <div class="agenda-chantier" style="display:flex;align-items:center;gap:12px;background:rgba(52,168,83,0.08);border-radius:10px;padding:10px 14px;border-left:3px solid #34A853;">
+      <span style="font-size:16px;flex-shrink:0;">🧱</span>
+      <div style="flex:1;">
+        <p style="font-size:12px;font-weight:700;color:white;margin:0 0 2px;padding:0;background:none;">Ravalement façade — M. Bernard</p>
+        <p style="font-size:10px;color:rgba(255,255,255,0.4);margin:0;padding:0;background:none;">Lun 10 → Ven 14 · Bordeaux</p>
       </div>
-      <span class="ac-badge green" style="font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px;background:rgba(52,168,83,0.2);color:#34A853;border:1px solid rgba(52,168,83,0.3);white-space:nowrap;">Confirmé</span>
+      <span style="font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px;background:rgba(52,168,83,0.2);color:#34A853;border:1px solid rgba(52,168,83,0.3);white-space:nowrap;flex-shrink:0;">✓ Confirmé</span>
     </div>
-    <div class="agenda-chantier" style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.06);border-radius:10px;padding:10px 14px;border-left:3px solid #E8500A;border-top:none;border-right:none;border-bottom:none;">
-      <span class="ac-icon" style="font-size:18px;flex-shrink:0;">🏠</span>
-      <div class="ac-info" style="flex:1;">
-        <p class="ac-title" style="font-size:12px;font-weight:700;color:white;margin-bottom:2px;padding:0;background:none;">Toiture complète — Mme Renault</p>
-        <p class="ac-sub" style="font-size:10px;color:rgba(255,255,255,0.45);margin:0;padding:0;background:none;">Lun 17 → Mer 19 mars · Mérignac</p>
+    <div class="agenda-chantier" style="display:flex;align-items:center;gap:12px;background:rgba(232,80,10,0.08);border-radius:10px;padding:10px 14px;border-left:3px solid #E8500A;">
+      <span style="font-size:16px;flex-shrink:0;">🏠</span>
+      <div style="flex:1;">
+        <p style="font-size:12px;font-weight:700;color:white;margin:0 0 2px;padding:0;background:none;">Toiture complète — Mme Renault</p>
+        <p style="font-size:10px;color:rgba(255,255,255,0.4);margin:0;padding:0;background:none;">Lun 17 → Mer 19 · Mérignac</p>
       </div>
-      <span class="ac-badge orange" style="font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px;background:rgba(232,80,10,0.2);color:#E8500A;border:1px solid rgba(232,80,10,0.3);white-space:nowrap;">En cours</span>
+      <span style="font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px;background:rgba(232,80,10,0.2);color:#E8500A;border:1px solid rgba(232,80,10,0.3);white-space:nowrap;flex-shrink:0;">⚡ En cours</span>
     </div>
-    <div class="agenda-chantier pending" style="display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.06);border-radius:10px;padding:10px 14px;border-left:3px solid #FBBC04;border-top:none;border-right:none;border-bottom:none;">
-      <span class="ac-icon" style="font-size:18px;flex-shrink:0;">🖌️</span>
-      <div class="ac-info" style="flex:1;">
-        <p class="ac-title" style="font-size:12px;font-weight:700;color:white;margin-bottom:2px;padding:0;background:none;">Peinture intérieure — M. Dupuis</p>
-        <p class="ac-sub" style="font-size:10px;color:rgba(255,255,255,0.45);margin:0;padding:0;background:none;">Lun 24 → Jeu 27 mars · Pessac</p>
+    <div class="agenda-chantier" style="display:flex;align-items:center;gap:12px;background:rgba(251,188,4,0.08);border-radius:10px;padding:10px 14px;border-left:3px solid #FBBC04;">
+      <span style="font-size:16px;flex-shrink:0;">🖌️</span>
+      <div style="flex:1;">
+        <p style="font-size:12px;font-weight:700;color:white;margin:0 0 2px;padding:0;background:none;">Peinture intérieure — M. Dupuis</p>
+        <p style="font-size:10px;color:rgba(255,255,255,0.4);margin:0;padding:0;background:none;">Lun 24 → Jeu 27 · Pessac</p>
       </div>
-      <span class="ac-badge yellow" style="font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px;background:rgba(251,188,4,0.2);color:#FBBC04;border:1px solid rgba(251,188,4,0.3);white-space:nowrap;">Devis signé</span>
+      <span style="font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px;background:rgba(251,188,4,0.2);color:#FBBC04;border:1px solid rgba(251,188,4,0.3);white-space:nowrap;flex-shrink:0;">📋 Devis signé</span>
     </div>
   </div>
   <div class="agenda-kpi-row" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:4px;">
@@ -1052,16 +1069,18 @@ footer{background:#16161e;color:rgba(255,255,255,0.55);font-size:14px;}
         <p class="label">On commence ?</p>
         <h2>Vos prochains chantiers<br>vous attendent.</h2>
         <p class="txt" style="margin-bottom:32px;">Remplissez ce formulaire, je vous recontacte sous 24h pour un appel gratuit de 20 minutes.</p>
-        <div class="form-mock">
+        <form class="form-mock" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <input type="hidden" name="bot-field" style="display:none;">
           <div class="form-row">
-            <input type="text" placeholder="Prénom *">
-            <input type="text" placeholder="Nom *">
+            <input type="text" name="prenom" placeholder="Prénom *" required>
+            <input type="text" name="nom" placeholder="Nom *" required>
           </div>
-          <input type="tel" placeholder="Téléphone *">
-          <input type="email" placeholder="E-mail *">
-          <textarea placeholder="Parlez-moi de votre projet *"></textarea>
-          <button class="submit-btn">Envoyer →</button>
-        </div>
+          <input type="tel" name="telephone" placeholder="Téléphone *" required>
+          <input type="email" name="email" placeholder="E-mail *" required>
+          <textarea name="projet" placeholder="Parlez-moi de votre projet *" required></textarea>
+          <button type="submit" class="submit-btn">Envoyer →</button>
+        </form>
       </div>
     </div>
   </div>
@@ -1091,10 +1110,27 @@ footer{background:#16161e;color:rgba(255,255,255,0.55);font-size:14px;}
   </div>
   <div class="footer-bottom">
     <span>© 2026 <a href="https://crea404.com">Créa404</a> — Tous droits réservés</span>
-    <span>Offre dédiée aux artisans &amp; PME du BTP</span>
+    <span style="display:flex;gap:20px;align-items:center;">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+    </span>
   </div>
 </footer>
 <script>
+// ── SMOOTH SCROLL ─────────────────────────────────────────────────
+document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    var href = this.getAttribute('href');
+    if (!href || href === '#') return;
+    var target = document.querySelector(href);
+    if (!target) return;
+    e.preventDefault();
+    var navH = document.querySelector('nav') ? document.querySelector('nav').offsetHeight : 0;
+    var top = target.getBoundingClientRect().top + window.scrollY - navH;
+    window.scrollTo({ top: top, behavior: 'smooth' });
+  });
+});
+
 // ── HAMBURGER MENU ────────────────────────────────────────────────
 function toggleMenu() {
   const menu = document.getElementById('mobileMenu');
@@ -1128,4 +1164,13 @@ document.querySelectorAll('.mobile-menu a').forEach(a => {
 document.addEventListener('click', function(e) {
   const menu = document.getElementById('mobileMenu');
   const btn  = document.getElementById('hamburger');
-  if (menu.classList.contai
+  if (menu.classList.contains('open') && !menu.contains(e.target) && !btn.contains(e.target)) {
+    menu.classList.remove('open');
+    menu.style.display = 'none';
+    btn.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
+</script>
+</body>
+</html>
