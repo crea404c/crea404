@@ -23,11 +23,13 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 <style>
 
 *{box-sizing:border-box;margin:0;padding:0;}html{overflow-x:hidden;scroll-behavior:smooth;}body{margin:0;padding:0;overflow-x:clip;}
 :root{--o:#E8500A;--od:#C43D00;--ol:#FEF3EE;--dark:#111;--text:#1A1A1A;--mid:#555;--light:#888;--border:#E5E5E5;--bg2:#F8F7F5;}
+@font-face{font-family:'Urbanist';src:local('Urbanist');font-display:swap;}
 body{margin:0;padding:0;font-family:'Urbanist',sans-serif;color:var(--text);font-size:16px;line-height:1.6;}
 nav{position:sticky!important;top:0!important;z-index:9999!important;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
 .nav-inner{max-width:1320px;margin:0 auto;padding:0 60px;height:72px;display:flex;align-items:center;justify-content:space-between;}
