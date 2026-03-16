@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Créa404 — Merci</title>
+<meta name="description" content="Votre message a bien été envoyé. Je vous recontacte sous 24h.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon-crea404/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-crea404/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/favicon-crea404/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Inter+Tight:wght@900&display=swap" rel="stylesheet">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --accent:#5B24FF;
+  --accent-hover:#4a1dd6;
+  --black:#0a0a0a;
+  --white:#ffffff;
+  --gray-bg:#f4f4f4;
+  --gray-200:#ddd;
+  --gray-400:#999;
+  --gray-500:#777;
+  --gray-600:#555;
+  --font-display:'Playfair Display',serif;
+  --font-body:'DM Sans',sans-serif;
+  --font-title:'Inter Tight',sans-serif;
+  --color-title:#352B53;
+  --max-width:1200px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--black);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+.container{max-width:var(--max-width);margin:0 auto;padding:0 40px}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--gray-200);transition:transform 0.3s ease}
+.nav.nav-hidden{transform:translateY(-100%)}
+.nav-inner{max-width:var(--max-width);margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav-logo{display:flex;align-items:center}
+.nav-logo img{height:34px;width:auto}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{font-size:15px;font-weight:500;color:var(--black);transition:color 0.2s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{font-size:14px;font-weight:600;color:var(--white)!important;background:var(--accent);padding:12px 28px;border-radius:50px;transition:background 0.2s}
+.nav-cta:hover{background:var(--accent-hover)}
+.nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.nav-mobile-toggle span{display:block;width:22px;height:2px;background:var(--black);margin:5px 0;transition:0.3s}
+
+/* THANK YOU PAGE */
+.thankyou-page{min-height:100vh;display:flex;align-items:center;padding:120px 0 80px}
+.thankyou-wrap{max-width:680px;margin:0 auto;text-align:center}
+.thankyou-icon{width:72px;height:72px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;margin:0 auto 28px}
+.thankyou-icon svg{width:36px;height:36px;stroke:var(--white);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.stag{font-size:13px;font-weight:600;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:16px}
+.thankyou-wrap h1{font-family:var(--font-title);font-size:clamp(28px,3.5vw,44px);font-weight:900;color:var(--color-title);line-height:1.2;margin-bottom:16px}
+.thankyou-wrap h1 em{font-family:var(--font-display);font-style:italic;color:var(--accent);font-weight:900}
+.thankyou-wrap>p{font-size:16px;color:var(--gray-500);margin-bottom:48px;line-height:1.75}
+.thankyou-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:48px}
+.step{background:var(--gray-bg);border-radius:16px;padding:24px 20px;text-align:center}
+.step-num{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--accent);color:var(--white);font-family:var(--font-title);font-size:16px;font-weight:900;margin-bottom:12px}
+.step p{font-size:14px;color:var(--gray-600);line-height:1.6}
+.thankyou-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-accent{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-size:15px;font-weight:600;color:var(--white);background:var(--accent);padding:16px 36px;border-radius:50px;border:none;cursor:pointer;transition:background 0.2s,transform 0.15s}
+.btn-accent:hover{background:var(--accent-hover);transform:translateY(-1px)}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-size:15px;font-weight:500;color:var(--black);background:transparent;padding:16px 36px;border-radius:50px;border:1.5px solid var(--gray-200);transition:border-color 0.2s}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+
+/* FOOTER */
+.footer{padding:28px 0;border-top:1px solid var(--gray-200);background:var(--gray-bg)}
+.footer-inner{display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:24px}
+.footer-logo{display:flex;align-items:center;flex-shrink:0}
+.footer-logo img{height:34px;width:auto}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.footer-links a{font-size:13px;color:var(--gray-500);transition:color 0.2s}
+.footer-links a:hover{color:var(--accent)}
+.footer-social{display:flex;gap:10px;flex-shrink:0}
+.footer-social a{width:32px;height:32px;border-radius:50%;background:var(--white);border:1px solid var(--gray-200);display:flex;align-items:center;justify-content:center;transition:background 0.2s,border-color 0.2s}
+.footer-social a:hover{background:#ede8ff;border-color:var(--accent)}
+.footer-social svg{width:14px;height:14px;fill:var(--gray-600)}
+.footer-social a:hover svg{fill:var(--accent)}
+.footer-bottom{margin-top:20px;padding-top:16px;border-top:1px solid var(--gray-200);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--gray-400)}
+.footer-bottom-legal{display:flex;gap:16px;flex-wrap:wrap}
+.footer-bottom-legal a{font-size:12px;color:var(--gray-400);transition:color 0.2s}
+.footer-bottom-legal a:hover{color:var(--accent)}
+
+@media(max-width:900px){
+  .container,.nav-inner{padding:0 24px}
+  .nav-links{display:none}
+  .nav-mobile-toggle{display:block}
+  .nav-links.open{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--gray-200);padding:24px;gap:20px}
+  .nav-logo img{height:30px}
+  .footer-logo img{height:34px}
+  .footer-inner{flex-direction:column;gap:20px;align-items:center;text-align:center}
+  .footer-bottom{flex-direction:column;align-items:center;gap:10px;text-align:center}
+  .thankyou-page{padding:100px 0 60px}
+  .thankyou-steps{grid-template-columns:1fr}
+  .step-num{margin:0 auto 12px}
+}
+@media(max-width:600px){
+  .footer-links{flex-wrap:wrap;justify-content:center}
+  .footer-accueil{display:none}
+  .thankyou-ctas{flex-direction:column}
+  .thankyou-ctas a,.thankyou-ctas button{width:100%;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="/assets/logo.svg" alt="Créa404"></a>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#approche">Services</a>
+      <a href="index.html#methode">Process</a>
+      <a href="index.html#apropos">À propos</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="index.html#contact" class="nav-cta">Prendre rendez-vous</a>
+    </div>
+    <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<main class="thankyou-page">
+  <div class="container">
+    <div class="thankyou-wrap">
+      <div class="thankyou-icon">
+        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <span class="stag">/ Confirmation</span>
+      <h1>Merci pour votre <em>message !</em></h1>
+      <p>Je prends connaissance de votre demande et vous recontacte sous 24h pour discuter de votre projet.</p>
+      <div class="thankyou-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <p>Je prends connaissance de votre demande et prépare un retour personnalisé</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <p>On échange par téléphone ou visio pour comprendre votre situation</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <p>Je vous propose un plan d'action concret adapté à votre activité</p>
+        </div>
+      </div>
+      <div class="thankyou-ctas">
+        <button class="btn-accent" onclick="Calendly.initPopupWidget({url:'https://calendly.com/crea404/entretien-gratuit'});return false;">Choisir un créneau →</button>
+        <a href="index.html" class="btn-outline">Retour à l'accueil</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <a href="index.html" class="footer-logo"><img src="/assets/logo.svg" alt="Créa404"></a>
+      <div class="footer-links">
+        <a href="index.html" class="footer-accueil">Accueil</a>
+        <a href="index.html#approche">Services</a>
+        <a href="index.html#methode">Process</a>
+        <a href="index.html#apropos">À propos</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/anthonypetiteaux/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://www.instagram.com/crea404_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61581890804569" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Créa404. Tous droits réservés.</span>
+      <div class="footer-bottom-legal">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="politique-confidentialite.html">Politique de confidentialité</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script>
+const toggle=document.getElementById('nav-toggle');
+const links=document.getElementById('nav-links');
+if(toggle)toggle.addEventListener('click',()=>links.classList.toggle('open'));
+let lastScroll=0;const nav=document.querySelector('.nav');window.addEventListener('scroll',()=>{const current=window.scrollY;if(current>lastScroll&&current>80){nav.classList.add('nav-hidden');}else{nav.classList.remove('nav-hidden');}lastScroll=current;},{passive:true});
+</script>
+</body>
+</html>
