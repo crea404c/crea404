@@ -595,9 +595,12 @@ img{max-width:100%;display:block}
             contact@crea404.com
           </a>
         </div>
-        <form id="contact-form" name="contact" method="POST" action="merci.html" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contact">
-          <p style="display:none;"><label>Ne pas remplir : <input name="bot-field"></label></p>
+        <form id="contact-form" name="contact" method="POST" action="https://api.web3forms.com/submit">
+          <input type="hidden" name="access_key" value="752950f4-6fa0-41c4-a64f-488832e7f55d">
+          <input type="hidden" name="redirect" value="https://crea404.com/merci.html">
+          <input type="hidden" name="subject" value="Nouveau contact Créa404">
+          <input type="hidden" name="from_name" value="Créa404 - Formulaire">
+          <p style="display:none;"><label>Ne pas remplir : <input name="botcheck"></label></p>
           <div class="form-row">
             <div class="form-group">
               <label for="prenom">Prénom *</label>
